@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrateur - QUIZZEO</title>
+    <link rel="stylesheet" href="styleadmi.css">
+</head>
+<body>
+    <header class="entete">
+        <h1 class="logo">
+            <img src="./img.logo/logo.png" alt="Logo QUIZZEO"> 
+            
+        </h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="/dashboard">Dashboard (Gestion)</a></li>
+                <li><a href="/profil">Mon Profil</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteneur-principal">
+        <h2>Dashboard Administrateur</h2>
+        
+        <section class="gestion-utilisateurs">
+            <h3>Liste des Utilisateurs <small>(Activation/Désactivation des comptes)</small></h3>
+            <div class="tableau-gestion">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom & Prénom</th>
+                            <th>Rôle</th>
+                            <th>Statut</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="liste-utilisateurs">
+                        <tr>
+                            <td>U-001</td>
+                            <td>Alice Dupont</td>
+                            <td>École</td>
+                            <td class="statut-actif">Activé</td>
+                            <td>
+                                <button class="btn-action btn-desactiver">Désactiver</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>U-002</td>
+                            <td>Bob Martin</td>
+                            <td>Simple Utilisateur</td>
+                            <td class="statut-inactif">Désactivé</td>
+                            <td>
+                                <button class="btn-action btn-activer">Activer</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section class="gestion-quiz">
+            <h3>Liste des Quiz <small>(Activation/Désactivation)</small></h3>
+            <div class="tableau-gestion">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titre</th>
+                            <th>Propriétaire</th>
+                            <th>Statut</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="liste-quiz">
+                        <tr>
+                            <td>QZ-A1</td>
+                            <td>Test de Géographie S1</td>
+                            <td>Alice Dupont (École)</td>
+                            <td class="statut-lance">Lancé</td>
+                            <td>
+                                <button class="btn-action btn-terminer">Terminer</button> 
+                                <button class="btn-action btn-desactiver">Désactiver</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="pied-page">
+        </footer>
+</body>
+</html>

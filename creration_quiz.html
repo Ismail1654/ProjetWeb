@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de Quiz - QUIZZEO</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="/public/js/gestion_quiz.js" defer></script> 
+</head>
+<body>
+    <header class="entete">
+        <h1 class="logo">
+            <img src="./img.logo/logo.png" alt="Logo.png">
+            
+        </h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="/dashboard">Tableau de Bord</a></li>
+                <li><a href="/profil">Mon Profil</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteneur-principal">
+        <h2>Générateur de Quiz</h2>
+        
+        <form action="/api/creation_quiz" method="POST" class="formulaire-creation-quiz">
+            
+            <section class="info-quiz">
+                <h3>1. Infos Générales</h3>
+                <div class="groupe-champ">
+                    <label for="titre-quiz">Titre du Quiz</label>
+                    <input type="text" id="titre-quiz" name="titre" required>
+                </div>
+                <div class="groupe-champ">
+                    <label for="description-quiz">Description (Optionnel)</label>
+                    <textarea id="description-quiz" name="description"></textarea>
+                </div>
+            </section>
+
+            <section class="questions-existantes">
+                <h3>2. Contenu du Quiz</h3>
+                
+                <div id="liste-questions-existantes" class="liste-items">
+                    <p class="message-vide">Aucune question n'a été ajoutée pour le moment.</p>
+                </div>
+                
+                <button type="button" id="bouton-ouvrir-ajout" class="bouton-principal bouton-ajouter">
+                    + Ajouter une Nouvelle Question
+                </button>
+            </section>
+            
+            <section id="bloc-ajout-question" class="formulaire-creation" style="display:none;">
+                <h4>Nouvelle Question</h4>
+                
+                <div class="groupe-champ">
+                    <label for="type-question">Type de Question</label>
+                    <select id="type-question" name="type" onchange="toggleOptions()">
+                        <option value="QCM">Question à Choix Multiples (QCM)</option>
+                        <option value="Libre">Réponse Libre (Texte) - Entreprise seulement</option>
+                    </select>
+                </div>
+
+                <div class="groupe-champ">
+                    <label for="enonce">Énoncé de la Question</label>
+                    <textarea id="enonce" name="enonce" required></textarea>
+                </div>
+
+                <div id="options-qcm" class="groupe-options">
+                    <label>Options de Réponse</label>
+                    <div id="conteneur-options">
+                        <input type="text" name="option_1" placeholder="Option 1" required>
+                        <input type="text" name="option_2" placeholder="Option 2" required>
+                    </div>
+                    <button type="button" id="bouton-ajouter-option" class="bouton-micro">+ Ajouter une option</button>
+                </div>
+
+                <div id="correction-ecole" class="groupe-champ">
+                    <label for="bonne-reponse">Bonne Réponse / Points</label>
+                    <input type="text" name="bonne_reponse" placeholder="Texte de la bonne réponse (QCM)">
+                    <input type="number" name="points" placeholder="Points (École)" min="0">
+                </div>
+
+                <button type="button" id="bouton-enregistrer-question" class="bouton-principal">
+                    Enregistrer la Question
+                </button>
+            </section>
+
+            <hr>
+            
+            <button type="submit" class="bouton-final">
+                Lancer le Quiz
+            </button>
+        </form>
+    </main>
+
+    <footer class="pied-page">
+        </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Quiz - QUIZZEO</title>
+    <link rel="stylesheet" href="stylepropr.css">
+</head>
+<body>
+    <header class="entete">
+        <h1 class="logo">
+            <img src="./img.logo/logo.png" alt="Logo QUIZZEO">
+            
+        </h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="/creation_quiz">Créer un Quiz</a></li>
+                <li><a href="/profil">Mon Profil</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteneur-principal">
+        <h2>Mes Quiz Créés</h2>
+        
+        <div class="header-gestion">
+            <a href="/creation_quiz" class="bouton-principal bouton-creer-quiz">
+                + Nouveau Quiz
+            </a>
+        </div>
+        
+        <section class="liste-quiz-proprio">
+            <div class="tableau-gestion">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titre du Quiz</th>
+                            <th>Statut</th>
+                            <th>Réponses</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="liste-quiz-proprio">
+                        <tr class="quiz-item">
+                            <td>Quiz S1 : Introduction au Python</td>
+                            <td class="statut-lance">Lancé</td>
+                            <td>45 réponses</td>
+                            <td>
+                                <button class="btn-action btn-terminer">Terminer</button>
+                                <button class="btn-action btn-resultats">Voir les Résultats</button>
+                            </td>
+                        </tr>
+                        <tr class="quiz-item">
+                            <td>Questionnaire de Satisfaction Client</td>
+                            <td class="statut-ecriture">En cours d'écriture</td>
+                            <td>0 réponse</td>
+                            <td>
+                                <a href="/creation_quiz/ID_X" class="btn-action btn-modifier">Modifier</a>
+                                <button class="btn-action btn-lancer">Lancer le Quiz</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="pied-page">
+        </footer>
+</body>
+</html>

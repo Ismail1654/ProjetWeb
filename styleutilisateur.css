@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --background-body: #f3f4f6;
+    --background-card: #ffffff;
+    --text-main: #1f2937;
+    --text-light: #6b7280;
+    --border-color: #d1d5db;
+    --status-success: #10b981;
+    --status-info: #3b82f6;
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+ul {
+    list-style: none;
+}
+
+.entete {
+    background-color: var(--background-card);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    padding: 0 2rem;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.menu-principal ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-principal a {
+    font-weight: 500;
+    color: var(--text-main);
+    padding: 8px 12px;
+    border-radius: var(--radius);
+}
+
+.menu-principal a:hover {
+    background-color: #eef2ff;
+    color: var(--primary-color);
+}
+
+.conteneur-principal {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.liste-reponses-utilisateur {
+    background-color: var(--background-card);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+#liste-reponses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message-vide {
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+.carte-reponse {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 20px;
+    background-color: #f9fafb;
+    transition: box-shadow 0.3s;
+}
+
+.carte-reponse:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.carte-reponse h3 {
+    color: var(--text-main);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 5px;
+}
+
+.carte-reponse p {
+    margin-bottom: 5px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.statut-repondu {
+    font-weight: 600;
+    color: var(--status-success);
+}
+
+.note {
+    font-weight: 700;
+    color: var(--status-success);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-action {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-detail {
+    background-color: var(--status-info);
+    color: white;
+}
+
+.btn-detail:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.pied-page {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .entete {
+        padding: 0 15px;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .menu-principal ul {
+        gap: 10px;
+    }
+
+    .menu-principal a {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .conteneur-principal {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .liste-reponses-utilisateur {
+        padding: 15px;
+    }
+}

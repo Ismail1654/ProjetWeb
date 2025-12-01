@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Dashboard - QUIZZEO</title>
+    <link rel="stylesheet" href="styleutilisateur.css">
+</head>
+<body>
+    <header class="entete">
+        <h1 class="logo">
+            <img src="./img.logo/logo.png" alt="Logo QUIZZEO">
+            
+        </h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="/dashboard">Mes Réponses</a></li>
+                <li><a href="/profil">Mon Profil</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteneur-principal">
+        <h2>Questionnaires auxquels j'ai répondu</h2>
+        
+        <section class="liste-reponses-utilisateur">
+            
+            <div id="liste-reponses" class="liste-items">
+                <div class="carte-reponse">
+                    <h3>Quiz: Test de Géographie S1</h3>
+                    <p>Répondu le : 10/11/2025</p>
+                    <p class="statut-repondu">Statut : Terminé</p>
+                    <p class="note">Note : 18/20 (Disponible pour le rôle École)</p>
+                    <button class="btn-action btn-detail">Voir mon Résumé</button>
+                </div>
+                
+                <div class="carte-reponse">
+                    <h3>Questionnaire de Satisfaction Octobre</h3>
+                    <p>Répondu le : 25/10/2025</p>
+                    <p class="statut-repondu">Statut : Terminé</p>
+                    <button class="btn-action btn-detail">Voir mon Résumé</button>
+                </div>
+                
+                <p class="message-vide" style="display:none;">Vous n'avez pas encore répondu à un questionnaire.</p>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer class="pied-page">
+        </footer>
+</body>
+</html>

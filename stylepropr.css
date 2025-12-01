@@ -1,0 +1,276 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --background-body: #f3f4f6;
+    --background-card: #ffffff;
+    --text-main: #1f2937;
+    --text-light: #6b7280;
+    --border-color: #d1d5db;
+    --status-launched: #3b82f6;
+    --status-draft: #eab308;
+    --status-success: #10b981;
+    --status-error: #ef4444;
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+ul {
+    list-style: none;
+}
+
+.entete {
+    background-color: var(--background-card);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    padding: 0 2rem;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.menu-principal ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-principal a {
+    font-weight: 500;
+    color: var(--text-main);
+    padding: 8px 12px;
+    border-radius: var(--radius);
+}
+
+.menu-principal a:hover {
+    background-color: #eef2ff;
+    color: var(--primary-color);
+}
+
+.conteneur-principal {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.header-gestion {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.bouton-creer-quiz {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.bouton-creer-quiz:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+section {
+    background-color: var(--background-card);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.tableau-gestion {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+.statut-lance, .statut-ecriture {
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.statut-lance {
+    background-color: #dbeafe;
+    color: var(--status-launched);
+}
+
+.statut-ecriture {
+    background-color: #fef9c3;
+    color: var(--status-draft);
+}
+
+td:last-child {
+    white-space: nowrap;
+}
+
+.btn-action {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.btn-terminer {
+    background-color: var(--status-error);
+    color: white;
+}
+
+.btn-terminer:hover {
+    background-color: #b91c1c;
+}
+
+.btn-resultats {
+    background-color: var(--status-launched);
+    color: white;
+}
+
+.btn-resultats:hover {
+    background-color: #2563eb;
+}
+
+.btn-modifier {
+    background-color: var(--status-draft);
+    color: var(--text-main);
+}
+
+.btn-modifier:hover {
+    background-color: #facc15;
+}
+
+.btn-lancer {
+    background-color: var(--status-success);
+    color: white;
+}
+
+.btn-lancer:hover {
+    background-color: #059669;
+}
+
+.pied-page {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .entete {
+        padding: 0 15px;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .menu-principal ul {
+        gap: 10px;
+    }
+
+    .menu-principal a {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .conteneur-principal {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+    
+    .btn-action {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+}
