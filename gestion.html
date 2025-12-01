@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Profil - QUIZZEO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="entete">
+        <h1 class="logo">
+            <img src="./img.logo/logo.png" alt="Logo QUIZZEO">
+            QUIZZEO
+        </h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="/dashboard">Tableau de Bord</a></li>
+                <li><a href="/creation-quiz">Créer un Quiz</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteneur-auth">
+        <h2>Mon Profil</h2>
+        <form action="/api/update-profile" method="POST" class="formulaire-auth">
+            
+            <div class="groupe-champ">
+                <label for="lastname">Nom</label>
+                <input type="text" id="lastname" name="lastname" value="Nom Actuel" required>
+            </div>
+            
+            <div class="groupe-champ">
+                <label for="firstname">Prénom</label>
+                <input type="text" id="firstname" name="firstname" value="Prénom Actuel" required>
+            </div>
+
+            <div class="groupe-champ">
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" name="email" value="email@actuel.com" required>
+            </div>
+            
+            <div class="groupe-champ">
+                <label for="password">Nouveau Mot de Passe</label>
+                <input type="password" id="password" name="password" placeholder="Laisser vide pour ne pas changer">
+            </div>
+
+            <div class="groupe-champ">
+                <label for="confirm-password">Confirmer Mot de Passe</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+            </div>
+            
+            <button type="submit" class="bouton-principal">Enregistrer les Modifications</button>
+            
+        </form>
+    </main>
+
+    <footer class="pied-page">
+        </footer>
+</body>
+</html>

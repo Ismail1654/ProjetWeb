@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Répondre au Quiz - QUIZZEO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="entete entete-simple">
+        <h1 class="logo">
+            <img src="./img.logo/logo.png" alt="Logo QUIZZEO">
+            QUIZZEO
+        </h1>
+    </header>
+
+    <main class="conteneur-reponse">
+        <h2 id="titre-quiz-reponse">Titre du Quiz: Test de Géographie S1</h2>
+        <p id="description-quiz-reponse">Ce quiz est conçu pour évaluer vos connaissances sur les capitales du monde.</p>
+        
+        <form action="/api/submit_quiz/QZ-ID-123" method="POST" class="formulaire-reponse">
+            
+            <div class="bloc-question" data-question-id="1">
+                <h4>1. Quelle est la capitale de la France ?</h4>
+                <div class="options-reponse">
+                    <label>
+                        <input type="radio" name="reponse_q1" value="A"> Paris
+                    </label>
+                    <label>
+                        <input type="radio" name="reponse_q1" value="B"> Berlin
+                    </label>
+                    <label>
+                        <input type="radio" name="reponse_q1" value="C"> Madrid
+                    </label>
+                </div>
+            </div>
+            
+            <div class="bloc-question" data-question-id="2">
+                <h4>2. Décrivez en une phrase le rôle de l'ONU.</h4>
+                <textarea name="reponse_q2" rows="3" required></textarea>
+            </div>
+            
+            <div class="groupe-champ identification-repondeur">
+                <label for="nom-repondeur">Votre Nom et Prénom (ou Pseudo)</label>
+                <input type="text" id="nom-repondeur" name="nom_repondeur" required>
+            </div>
+
+            <button type="submit" class="bouton-principal bouton-final">Soumettre mes Réponses</button>
+            
+        </form>
+    </main>
+
+    <footer class="pied-page">
+        </footer>
+</body>
+</html>
