@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion - QUIZZEO</title>
+    <title>Inscription - QUIZZEO</title>
     <link rel="stylesheet" href="/public/css/style.css">
-    <img src = './img.logo/logo.png' alt ='logo'>
+    
+    <img src = './img.logo/logo.png' alt ='logo'> 
 </head>
 <body>
     <header class="entete">
         <h1 class="logo">
-            
-            GENERATEUR DE QUIZZ - QUIZZEO
+            QUIZZEO
         </h1>
     </header>
 
     <main class="conteneur-auth">
-        <h2>Connexion</h2>
-        <form action="/login" method="POST" class="formulaire-auth">
+        <h2>Création de Compte</h2>
+        <form action="/register" method="POST" class="formulaire-auth">
             
+            <div class="groupe-champ">
+                <label for="lastname">Nom</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            
+            <div class="groupe-champ">
+                <label for="firstname">Prénom</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+
             <div class="groupe-champ">
                 <label for="email">Adresse Email</label>
                 <input type="email" id="email" name="email" required>
@@ -29,10 +39,27 @@
                 <input type="password" id="password" name="password" required>
             </div>
             
-            <button type="submit" class="bouton-principal">Se Connecter</button>
+            <div class="groupe-champ">
+                <label for="role">Rôle (Je m'inscris en tant que...)</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Choisir mon rôle</option>
+                    <option value="ecole">École</option>
+                    <option value="entreprise">Entreprise</option>
+                    <option value="simple_utilisateur">Simple Utilisateur</option>
+                </select>
+            </div>
+            
+            <div class="groupe-champ verification-captcha">
+                <label>Vérification de Sécurité (CAPTCHA)</label>
+                <div id="captcha-display" class="boite-captcha">
+                    </div>
+                <input type="text" id="captcha-input" name="captcha-response" placeholder="Entrez la réponse ici" required>
+            </div>
+            
+            <button type="submit" class="bouton-principal">Créer mon Compte</button>
             
             <p class="bascule-form">
-                Pas encore de compte ? <a href="/inscription">Créer un compte</a>
+                Déjà un compte ? <a href="/connexion">Se connecter</a>
             </p>
         </form>
     </main>
