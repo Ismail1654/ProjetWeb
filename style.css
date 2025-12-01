@@ -27,14 +27,8 @@ body {
 }
 
 .logo img {
-    height: 60px;
-    vertical-align: middle;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--jaune);
+    height: 50px;
+    
 }
 
 .conteneur-auth {
@@ -105,7 +99,9 @@ body {
 .bascule-form a:hover {
     text-decoration: underline;
 }
-
-.logo {
-    width: 120px;
+ 
+.logo2 {
+    display: block;
+    margin: 20px auto;
+    height: 80px;     
 }
