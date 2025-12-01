@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connexion - QUIZZEO</title>
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
-    
+    <header class="entete">
+        <h1 class="logo">
+            <img src="/public/images/logo_quizzeo.png" alt="Logo QUIZZEO - Plateforme de quiz en ligne">
+            QUIZZEO
+        </h1>
+    </header>
+
+    <main class="conteneur-auth">
+        <h2>Connexion</h2>
+        <form action="/login" method="POST" class="formulaire-auth">
+            
+            <div class="groupe-champ">
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="groupe-champ">
+                <label for="password">Mot de Passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="bouton-principal">Se Connecter</button>
+            
+            <p class="bascule-form">
+                Pas encore de compte ? <a href="/inscription">Créer un compte</a>
+            </p>
+        </form>
+    </main>
+
+    <footer class="pied-page">
+        </footer>
 </body>
 </html>
