@@ -1,0 +1,24 @@
+{
+  "name": "projetweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ismail1654/ProjetWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ismail1654/ProjetWeb/issues"
+  },
+  "homepage": "https://github.com/Ismail1654/ProjetWeb#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
